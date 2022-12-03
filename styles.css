@@ -1,0 +1,30 @@
+body {
+  background-color: #1565c0;
+}
+
+.one {
+  width: 100%;
+  background-image: url("photos/bottomocean.jpg");
+  margin: 0px;
+  height: 430px;
+}
+
+.two {
+  width: 100%;
+  background-image: url("photos/start.jpg");
+  margin: 0px;
+  height: 350px;
+}
+
+.pfest {
+  color: white;
+  margin:20px;
+
+}
+
+.card {
+  margin: 50px;
+  opacity: 80%;
+}
+
+#map { height: 300px; }

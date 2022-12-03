@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+    <script src="tracks.geojson"></script>
+    <script src="geojson11.geojson"></script>
+
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper blue darken-3">
+        <a href="#" class="brand-logo "><img src="logo.png" style="height:50px; margin:5px;"></a>
+        <a href="https://www.facebook.com/groups/316556696623788" class="right" target="_blank"><img src="fb.png" style="height:40px; margin:10px;"/></a>
+      </div>
+    </nav>
+    <div class="one">
+      <div class="row">
+          <div class="col s12 m4 float right">
+            <div class="card">
+              <div class="card-content">
+                <h4 style="color: orange; font-weight: bold;">Wharf to Wharf</h4>
+                <h5>Trail & Obstacle run</h5>
+                <h5>St Andrews, NB (5/23/23)</h5>
+
+                <br>
+                <a onclick="switchmap(geojsonfeatures,'green')" class='btn green white-text chip'>19km</a>
+                <a onclick="switchmap(geojson11,'blue')" class='btn blue white-text chip'>11km</a>
+
+              </div>
+              <div class="card-action">
+                <a href="https://events.runnb.ca/online-registration/register/paddlefest-wharf-to-wharf-19k-and-11k/473400/" class="btn orange text-white" target="_blank">Sign up</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row white-text">
+        <div class="col s12 m6">
+          <div class="pfest">
+            <h6 style="margin-left:5px; margin-top:0px; padding:0px;">Signature outdoor event in the ...</h6>
+            <img src="pfest.png" width="200px;"/>
+            <h6 style="margin-left:5px; margin-top:0px; padding:0px;">Music and outdoor recreation festival</h6>
+            <a href="https://www.facebook.com/PaddlefestNB" target="_blank"><img src="fb.png" width="40px"/></a>
+            <span style="margin-left:10px;"><a href="https://www.paddlefestnb.ca/" target="_blank"><img src="web.png" width="40px"/></a></span>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="white-text">
+            <h5>Challenging and unique</h5>
+            <div class="orange lighten-1 chip white-text">Maritime resort town</div><div class="orange lighten-1 chip white-text">Highest tides</div><div class="orange lighten-1 chip white-text">Run to an island</div>  <div class="chip orange lighten-1 white-text">National historic sites</div><div class="orange lighten-1 chip white-text">Lighthouse</div><div class="orange lighten-1 chip white-text">Wharf ladder finish</div>
+            <div class="orange lighten-1 chip white-text">Mud</div><div class="orange lighten-1 chip white-text">Sea weed</div><div class="orange lighten-1 chip white-text">Rock scrambles</div><div class="orange lighten-1 chip white-text">Fully supported</div>
+            <div class="orange lighten-1 chip white-text">Craft beer!</div>
+          </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div id='map'>
+    </div>
+
+    <div class="row">
+      <div style="padding: 20px">
+        <div class="col s12 m3">
+          <img class="materialboxed" data-caption="Paddlefest in Market Sqare in St Andrews, NB" width="300" src="photos/aerial.jpg">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed" data-caption="Happy finishers enjoying some craft beer" width="300" src="photos/after.jpg">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed" data-caption="Climb the ladder to finish!" width="300" src="photos/bradfinish.jpg">
+        </div>
+        <div class="col s12 m3">
+          <img class="materialboxed" data-caption="Wharf to Wharf is so much fun!" width="300" src="photos/dressup.jpg">
+        </div>
+      </div>
+    </div>
+
+    <div class="two">
+    </div>
+
+
+    <footer class="page-footer blue darken-3">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Wharf2Wharf</h5>
+            <p class="grey-text text-lighten-4">Challenging and unique trail run on the bottom of the ocean.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Sponsors</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="https://www.townofsaintandrews.ca/" target="_blank">Town of Saint Andrews</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://www.paddlefestnb.ca/" target="_blank">Paddlefest</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://www.facebook.com/graystonebrewing/" target="_blank">Graystone Brewery</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://www.runnb.ca/" target="_blank">Trail Running NB</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2022 Wharf2Wharf
+
+        </div>
+      </div>
+    </footer>
+  </body>
+
+
+  <script type="text/javascript">
+
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.materialboxed');
+      var instances = M.Materialbox.init(elems);
+    });
+
+    map = new L.Map('map');
+    var cartocdn = 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png';
+    carto = new L.TileLayer(cartocdn);
+    map.setView([45.085,-67.06],12.35); // centered on SA lat, long
+    map.addLayer(carto);
+    map.scrollWheelZoom.disable();
+
+    var myStyle = {
+        "color": "blue",
+        "weight": 2
+    };
+    var little = L.geoJSON(geojson11,{style: myStyle});
+    var myStyle = {
+        "color": "green",
+        "weight": 2
+    };
+    var full = L.geoJSON(geojsonfeatures,{style: myStyle});
+    full.addTo(map);
+
+    function switchmap(geojson,c) {
+      if (c == 'green') {
+        map.removeLayer(little);
+        full.addTo(map);
+      } else {
+        map.removeLayer(full);
+        little.addTo(map,{style: myStyle});
+      }
+    }
+
+  </script>
+</html>
