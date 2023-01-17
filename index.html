@@ -126,6 +126,12 @@
       <div style="padding:30px">
         <h3 class="orange-text text-lighten-1" style="margin:0px">Epic trail run!</h3>
         <h6>Experience beautiful and historic St. Andrews, NB in a whole new way ... from the bottom of the ocean! This trail run begins and ends at the town wharf and circumnavigates the town and Ministers island. Yes, you can actually run to and around an island on this race. The Bay of Fundy has the highest tidal range in the world, permitting an unique outdoor experience. </h6>
+
+        <!-- Modal Trigger -->
+        <div><br>
+          <button data-target="modal1" class="btn orange lighten-1 white-text modal-trigger">Vikings</button>
+        </div>
+
       </div>
     </div>
 
@@ -165,7 +171,7 @@
               <li><a class="white-text" href="https://www.townofsaintandrews.ca/" target="_blank">Town of Saint Andrews</a></li>
               <li><a class="white-text" href="https://www.paddlefestnb.ca/" target="_blank">Paddlefest</a></li>
               <li><a class="white-text" href="https://www.facebook.com/graystonebrewing/" target="_blank">Graystone Brewery</a></li>
-              <li><a class="white-text" href="https://www.csnbtr.com" target="_blank">Trail Running NB</a></li>
+              <li><a class="white-text" href="https://www.csnbtr.com/" target="_blank">Trail Running NB</a></li>
             </ul>
           </div>
         </div>
@@ -177,14 +183,89 @@
         </div>
       </div>
     </footer>
-  </body>
 
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4 class="orange-text lighten-1">Vikings</h4>
+        <p>These top 10 finishers ran incredible races and have achieved Viking level mastery of the wind, water and rocks of the Wharf to Wharf challenge.</p>
+        <table class="striped">
+          <thead>
+            <tr>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Time</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Luke Edgar</td>
+              <td>2022</td>
+              <td>1:29:55</td>
+            </tr>
+            <tr>
+              <td>Chris Watson</td>
+              <td>2021</td>
+              <td>1:34:51</td>
+            </tr>
+            <tr>
+              <td>Mark Miller</td>
+              <td>2022</td>
+              <td>1:35:53</td>
+            </tr>
+            <tr>
+              <td>Glenn Trites</td>
+              <td>2021</td>
+              <td>1:36:26</td>
+            </tr>
+            <tr>
+              <td>Kyle Bradford</td>
+              <td>2021</td>
+              <td>1:38:09</td>
+            </tr>
+            <tr>
+              <td>Michelle Decourcey</td>
+              <td>2022</td>
+              <td>1:56:56</td>
+            </tr>
+            <tr>
+              <td>Sarah Badger</td>
+              <td>2021</td>
+              <td>1:57:39</td>
+            </tr>
+            <tr>
+              <td>Anke Brink</td>
+              <td>2021</td>
+              <td>2:03:08</td>
+            </tr>
+            <tr>
+              <td>Emilie Chiasson</td>
+              <td>2021</td>
+              <td>2:03:45</td>
+            </tr>
+            <tr>
+              <td>Melissa Martin</td>
+              <td>2021</td>
+              <td>2:05:56</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+
+  </body>
 
   <script type="text/javascript">
 
     document.addEventListener('DOMContentLoaded', function() {
       var elems = document.querySelectorAll('.tooltipped');
       var instances = M.Tooltip.init(elems);
+      var mods = document.querySelectorAll('.modal');
+      var modints = M.Modal.init(mods);
     });
 
     document.addEventListener('DOMContentLoaded', function() {
